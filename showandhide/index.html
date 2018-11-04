@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="showHide">
+<head >
+	<title>Show and hide </title>
+	<link rel="stylesHeet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+	<div class="container">
+<div ng-controller="showCtrl">
+	<h3>Hide Salary :  <input type="checkbox" ng-model="hideSalary" ></h3>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<td>Name</td>
+				<td>Subject</td>
+				<td>Gender</td>
+				<td ng-hide="hideSalary">Salary</td>
+				<td ng-show="hideSalary">Salary</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat= "employee in employees">
+				<td>{{employee.name}}</td>
+				
+				<td>{{employee.subject}}</td>
+				<td>{{employee.gender}}</td>
+				<td ng-hide="hideSalary"> {{employee.salary}} </td>
+				<td ng-show="hideSalary">######</td>
+
+			</tr>
+		</tbody>
+	</table>
+	<div>
+	
+
+
+
+
+</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="showCtrl.js"></script>
+	</body>
+</html> 
