@@ -1,0 +1,52 @@
+
+</!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Handling events</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+	<div class="container">
+	<h1>Angularjs Handling Event</h1>
+	<div ng-controller="myCtrl" >
+	<table class="table table-bordered">
+		<thead >
+			<tr>
+				<td>First Name</td>
+				<td>Last Name</td>
+				<td>Gender</td>
+				<td>Education</td>
+				<td>Likes</td>
+				<td>Disikes</td>
+				<td>Likes/dislikes</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="namelist in namelists">
+				<td>{{namelist.firstName}}</td>
+				<td>{{namelist.lastName}}</td>
+				<td>{{namelist.gender}}</td>
+				<td>{{namelist.education}}</td>
+				<td>{{namelist.like}}</td>
+                <td>{{namelist.dislike}}</td>
+				<td><input type="button"  ng-click="incrementLike(namelist)" value="Like">
+				    <input type="button"  ng-click="incrementDislike(namelist)" value="Dislike"></td>
+			</tr>
+		</tbody>
+
+	</table>
+
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="myCtrl.js"></script>
+</body>
+</html>
